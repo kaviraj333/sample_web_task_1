@@ -1,0 +1,180 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book My Trip</title>
+    <link rel="stylesheet" href="{% static 'style.css'  %}">
+</head>
+<body>
+<!----------------------------------------------------------------- HEADER CONTENT ------------------------------------------------>
+    <header>
+        <div class="top-bar">
+            <div class="lobo">
+                <div class="logo">
+                    <h3>bookmy<span>trip.<sub>com</sub></span></h3>
+                </div>
+            </div>
+            <div class="supports"><img src="https://cdn-icons-png.flaticon.com/128/455/455705.png" width="20px" height="20px" alt=""> Call 24/7 Support <br> +91 (44) 1234 5678 
+                <input class="one" type="text"  placeholder="&#x1F50Dsearch whole website here ">
+            </div>
+        </div>
+<!-------------------------------------------------- NAVBAR CONTENT ----------------------------------------------------------->
+<nav class="navbar">
+    <input type="checkbox" id="menu-toggle">
+     <label for="menu-toggle" class="menu-icon">&#9776 <span>Home</span></label>
+            <ul class="dropdown">
+                <li>
+                    <a href="#">Hotels</a>
+                    <div class="rooms">
+                        <a href="#">hotels in india</a>
+                        <a href="#">International hotel</a>
+                        <a href="#">popular-hotels in Asia</a>
+                        <a href="#">popular-hotels in Europe</a>
+                     </div>
+                </li>
+
+                <li><a href="#">Flights</a></li>
+                <li><a href="#">Vacations</a></li>
+                <li><a href="#">Hot Deals</a></li>
+                <li><a href="#">Travel Guides</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><button class="btn">SIGN UP</button></li>
+                <li><button class="btn-yellow">MY ACCOUNT</button></li>
+            </ul>
+        </nav>
+    </header>
+<!------------------------------------------------ HERO BANNER CONTENT ------------------------------------------------------------>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Paris Hilton Hotel, Mumbai, India</h2>
+            <p>Lorem ipsum dolor sit amet...</p>
+            <div class="price">$1200 <span>Inclusive of food, dinner</span></div>
+          </div>
+          <div>
+   
+    </div>
+   
+       
+    
+    </section>
+<!-------------------------------------------------- BOOKING FORM ------------------------------------------------->
+    <div class="booking-form">
+        <div class="a">
+            <h3>Book Your Trip:</h3>
+        </div>
+        
+        <div class="form-group">
+            <label for="what">What?</label>
+            <input type="text" id="what" placeholder="Enter city or hotel">
+        </div>
+        <div class="form-group">
+            <label for="where">Where?</label>
+            <input type="text" id="where" placeholder="Going to">
+        </div>
+        <div class="form-group">
+            <label for="when-in">When?</label>
+            <input type="date" id="when-in">
+        </div>
+        <div class="form-group">
+            <label for="when-out">When?</label>
+            <input type="date" id="when-out">
+        </div>
+        <div class="form-group">
+            <label for="rooms">Rooms</label>
+            <select id="rooms">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="adults">Adults</label>
+            <select id="adults">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="children">Children</label>
+            <select id="children">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <button type="submit" class="search-button">Search</button>
+    </div>
+<!---------------------------------------------------------- POPULAR HOTELS ----------------------------------------------------------------->
+    <section class="popular-hotels">
+        <h2 class="z">Popular Hotels</h2>
+        <div class="hotels">
+            <div class="hotel-card">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/103704804.jpg?k=588075213b05347681008bb4316faf42bd54714a378eb1d438d3d877350d62c0&o=&hp=1" alt="" width="300px">
+                <h3>Hotel Tajmahal Palace</h3>
+                <p>Mumbai, India</p>
+                <h4>$2000</h4>
+            </div>
+            <div class="hotel-card">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/620719916.webp?k=616cefe723433fd501f4fe89c7f415ce49822b10d769c7a725f8e35b39be66af&o=" width="300px" height="300px" alt="">
+                <h3>JW Marriot</h3>
+                <p>Zurich, Switzerland</p>
+                <h4>$3200</h4>
+            </div>
+            <div class="hotel-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIoIeE_4Ol581w8w5vPd0CyWmZr_8m4O4-DQ&s" width="300px" height="300px" alt="">
+                <h3>Hotel Mariott</h3>
+                <p>Melbourne, Australia</p>
+                <h4>$1200</h4>
+            </div>
+        </div>
+    </section>
+<!------------------------------------------------------ HOT DEALS ----------------------------------------------------------->
+    <section class="hot-deals">
+        <h2 class="y">Hot Deals</h2>
+        <div class="deals">
+            <div class="deal-card">
+                <h3>Paris Eurostar Breaks</h3>
+                <span>From $350</span>
+            </div>
+            <div class="deal-card2">
+                <h3>Travel Maldives</h3>
+                <span>Special Offer</span>
+            </div>
+        </div>
+    </section>
+<!-------------------------------------------------------- FOOTER SECTION --------------------------------------------------------->
+    <footer>
+        <div class="footer-content">
+            <div class="company">
+                <h3>Company</h3>
+                <ul>
+                    <li>About the company</li>
+                    <li>Terms&conditions</li>
+                    <li>Privacy policy</li>
+                    <li>Career</li>
+                </ul>
+            </div>
+            <div class="support">
+                <h3>Customer Support</h3>
+                <ul>
+                    <li>Contact</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <img src="https://miro.medium.com/v2/resize:fit:1400/0*K5-t_cOXHaJ_KS3m.png" width="80px" alt="">
+            </div>
+            <div class="newsletter">
+                <h3>Subscribe</h3>
+                <input class="three" type="email" placeholder="Enter your email">
+                <button class="two">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

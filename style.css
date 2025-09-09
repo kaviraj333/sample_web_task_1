@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+/*------------------------------------------------------------- TopBar-------------------------------------------------------------------- */
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    background: #eee;
+    padding: 2px 20px;
+
+}
+.support{
+   margin: 40px;
+   margin-right: 8%;
+}
+.support input{
+    border-radius: 5px;
+}
+.one{
+    padding: 5px;
+    padding-right: 10px;
+    /* margin-bottom: 10px; */
+    margin-left: 10px;
+}
+.logo{
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 40px;
+    font-size: large;
+    font-weight: bold;
+}
+/* .logo {
+    font-size: 24px;
+    font-weight: bold;
+    background: #eee;
+    padding: 20px;
+  } */
+  .logo span {
+    color: white;
+    background:#0072bc;
+    padding: 2px 5px;
+    border-radius: 50px;
+  }
+
+/*----------------------------------------------------- MEDIA QUERY FOR TOPBAR--------------------------------------------------------*/
+@media (max-width:475px) {
+    /* .logo{
+        justify-content: center;
+        margin-right: -60px;
+    }
+    .support{
+        margin-bottom: -20px;
+    } */
+    .top-bar {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+        padding: 15px;
+        background: #eee;
+        border-bottom: 1px solid #ccc;
+      }
+      .one{
+        margin-top: 5px;
+        margin-left: -10px;
+      }
+      
+}
+
+   
+/*------------------------------------------ NAVBAR CONTENT------------------------------------------------------ */
+.navbar input[type="checkbox"]{
+    display: none;
+  }
+
+  .navbar .menu-icon{
+    display: none;
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+    padding: 10px;
+  }
+nav ul {
+    display: flex;
+    list-style: none;
+    background: #003580;
+    padding: 10px;
+    justify-content: center;
+}
+
+nav ul li a{
+    margin: 0 15px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+/* Dropdown Parent */
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Main Link */
+.dropdown li {
+    position: relative;
+}
+
+/* Hide Sub Menu Initially */
+.rooms {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+/* Show Sub Menu on Hover */
+.dropdown li:hover .rooms {
+    display: block;
+}
+
+/* Styling Links */
+.dropdown a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    color: black;
+}
+.dropdown a:hover{
+background-color: skyblue;
+}
+
+/* Hover Effect on Submenu Links */
+.rooms a:hover {
+    background-color: skyblue;
+    color: white;
+}
+
+/* a:hover{
+    background-color: skyblue;
+    padding: 15px;
+}
+.rooms a{
+    display: none;
+    list-style-type: none;
+}
+.dropdown li:hover .rooms {
+    display: block;
+} */
+
+
+.btn {
+    background: #ffa500;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-yellow {
+    background: yellow;
+    margin: 5px;
+    color: #333;
+    padding: 5px 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+/*---------------------------------------------------- NAVBAR MEDIA QUERY ----------------------------------------------------------------*/
+@media (max-width:475px) {
+.dropdown{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .menu-icon {
+    display: block;
+    margin-left: auto;
+}
+
+  .navbar .dropdown{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar .dropdown li{
+    display: block;
+    align-items: center;
+  }
+  .navbar input[type="checkbox"]:checked ~ .dropdown {
+    display:block;
+    float: left;
+  } 
+  .navbar{
+    background-color:  #003580;;
+  }
+  
+}
+  
+
+/*----------------------------------------------------- HERO ---------------------------------------------------------------------------*/
+.hero {
+    background: url('https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?cs=srgb&dl=pexels-thorsten-technoman-109353-338504.jpg&fm=jpg') no-repeat center center/cover;
+    background-position-x: center;
+    /* background-position-y: 5px ; */
+    height: 400px;
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+    padding: 0 50px;
+    color: #fff;
+}
+.hero-text{
+    background: rgba(9, 57, 147, 0.5);
+    padding: 10px 15px;
+    margin-left: 50%;
+}
+.hero-text h2 {
+    font-size: 32px;
+}
+
+.price {
+    margin-top: 10px;
+    font-size: 24px;
+    /* background-color: rgba(9, 57, 147, 0.5); */
+    padding: 5px 10px;
+}
+/*--------------------------------------------- HERO MEDIA QUERY---------------------------------------------------------------------------- */
+@media (max-width: 475px) {
+    .hero-text{
+      display: block;
+      align-items: center;
+      justify-content: center;
+      margin-left:-60px;
+      margin-bottom: 90px;
+    }
+    .price{
+        font-size: 18px;
+        background: rgba(9, 57, 147, 0.5);
+        margin-bottom: -20px
+    }
+};
+/*---------------------------------------------- BOOKING FORM ---------------------------------------------------------------------------*/
+.booking-form {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    margin-top: -115px;
+    margin-left: 10%;
+    display: flex;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.search-button {
+    background-color: #ffc107;  
+    color: #333;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.search-button:hover {
+    background-color: #e0a800;
+}
+
+
+
+.search-section {
+    position: relative;
+    padding: 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.search-section form select,
+.search-section form input,
+.search-section form button {
+    padding: 10px;
+    margin: 5px;
+}
+ 
+/*------------------------------------ MEDIA QUERY FOR BOOKING FORM -------------------------------------------------------------------*/
+@media (max-width: 475px) {
+   .booking-form{
+    padding-top: 5px;
+   } 
+   .a{
+    background-color: #898181;
+   }
+   .form-group{
+    padding: 10px 8px;
+    }
+    .form-group input{
+        margin-right: 150px;
+    }
+    .form-group select{
+        margin-right: 150px;
+    }
+    .search-button{
+        margin-left: 80px;
+    }
+    
+}
+/*--------------------------------------- POPULAR HOTEL --------------------------------------------------------------------------*/
+.popular-hotels, .hot-deals {
+    padding: 40px;
+}
+h4{
+    background-color: #003580;
+    color: #fff;
+    width: 100px;
+    margin-left: 38%;
+    margin-top: 5px;
+}
+
+.hotels, .deals {
+    display: flex;
+    justify-content: space-around;
+}
+/* .hotel-card{
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 30%;
+    text-align: center;
+} */
+.hotel-card {
+    width: 30%;
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+  }
+
+.deal-card {
+    background: url(https://img.veenaworld.com/group-tours/world/europe/eudr/eudr-thb-EUDR-1562023.jpg);
+    background-repeat: no-repeat;
+    padding: 100px;
+    border: 1px solid #ccc;
+    width:500px;
+    text-align: center;
+}
+.deal-card2 {
+    background: url(https://media-cdn.tripadvisor.com/media/photo-s/29/7c/95/78/overwater-villas.jpg);
+    background-repeat: no-repeat;
+    padding: 100px;
+    border: 1px solid #ccc;
+    width:500px;
+    text-align: center;
+}
+/*--------------------------------------------- FOOTER------------------------------------------------------ */
+footer {
+    
+    background: white;
+    color:gray;
+    padding: 40px;
+}
+.support{
+    padding-bottom: 80px;
+}
+.newsletter{
+    margin-top: 30px;
+}
+.company{
+    margin-top: 30px;
+}
+.social{
+    margin-top: 30px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+.three{
+    padding: 6px;
+}
+.two{
+    background-color: skyblue;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px;
+}
+
+.footer-content ul {
+    list-style: none;
+}
+
+.footer-content h3 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Design */
+ 
